@@ -3,8 +3,8 @@ package https
 import (
 	"net/http"
 
-	"github.com/kabukky/journey/configuration"
-	"github.com/kabukky/journey/filenames"
+	"github.com/volcano822/journey/configuration"
+	"github.com/volcano822/journey/filenames"
 )
 
 func StartServer(addr string, handler http.Handler) error {

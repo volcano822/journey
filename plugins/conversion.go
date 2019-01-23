@@ -3,8 +3,8 @@
 package plugins
 
 import (
-	"github.com/kabukky/journey/structure"
-	"github.com/kabukky/journey/structure/methods"
+	"github.com/volcano822/journey/structure"
+	"github.com/volcano822/journey/structure/methods"
 	"github.com/yuin/gopher-lua"
 )
 

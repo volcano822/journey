@@ -3,11 +3,11 @@ package database
 import (
 	"database/sql"
 
-	"github.com/kabukky/journey/database/migration"
-	"github.com/kabukky/journey/date"
-	"github.com/kabukky/journey/filenames"
-	"github.com/kabukky/journey/helpers"
-	"github.com/kabukky/journey/structure"
+	"github.com/volcano822/journey/database/migration"
+	"github.com/volcano822/journey/date"
+	"github.com/volcano822/journey/filenames"
+	"github.com/volcano822/journey/helpers"
+	"github.com/volcano822/journey/structure"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/satori/go.uuid"
 )
@@ -144,7 +144,8 @@ func Initialize() error {
 		return err
 	}
 	currentTime := date.GetCurrentTime()
-	_, err = readDB.Exec(stmtInitialization, uuid.NewV4().String(), currentTime, currentTime, uuid.NewV4().String(), currentTime, currentTime, uuid.NewV4().String(), currentTime, currentTime, uuid.NewV4().String(), currentTime, currentTime, uuid.NewV4().String(), currentTime, currentTime, uuid.NewV4().String(), currentTime, currentTime, uuid.NewV4().String(), currentTime, currentTime, uuid.NewV4().String(), currentTime, currentTime, uuid.NewV4().String(), currentTime, currentTime, uuid.NewV4().String(), currentTime, currentTime, uuid.NewV4().String(), currentTime, currentTime, uuid.NewV4().String(), currentTime, currentTime)
+	uuid, _ := uuid.NewV4()
+	_, err = readDB.Exec(stmtInitialization, uuid.String(), currentTime, currentTime, uuid.String(), currentTime, currentTime, uuid.String(), currentTime, currentTime, uuid.String(), currentTime, currentTime, uuid.String(), currentTime, currentTime, uuid.String(), currentTime, currentTime, uuid.String(), currentTime, currentTime, uuid.String(), currentTime, currentTime, uuid.String(), currentTime, currentTime, uuid.String(), currentTime, currentTime, uuid.String(), currentTime, currentTime, uuid.String(), currentTime, currentTime)
 	// TODO: Is Commit()/Rollback() needed for DB.Exec()?
 	if err != nil {
 		return err

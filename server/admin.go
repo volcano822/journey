@@ -12,16 +12,16 @@ import (
 	"time"
 
 	"github.com/dimfeld/httptreemux"
-	"github.com/kabukky/journey/authentication"
-	"github.com/kabukky/journey/configuration"
-	"github.com/kabukky/journey/conversion"
-	"github.com/kabukky/journey/database"
-	"github.com/kabukky/journey/date"
-	"github.com/kabukky/journey/filenames"
-	"github.com/kabukky/journey/slug"
-	"github.com/kabukky/journey/structure"
-	"github.com/kabukky/journey/structure/methods"
-	"github.com/kabukky/journey/templates"
+	"github.com/volcano822/journey/authentication"
+	"github.com/volcano822/journey/configuration"
+	"github.com/volcano822/journey/conversion"
+	"github.com/volcano822/journey/database"
+	"github.com/volcano822/journey/date"
+	"github.com/volcano822/journey/filenames"
+	"github.com/volcano822/journey/slug"
+	"github.com/volcano822/journey/structure"
+	"github.com/volcano822/journey/structure/methods"
+	"github.com/volcano822/journey/templates"
 	"github.com/satori/go.uuid"
 )
 
@@ -374,7 +374,8 @@ func apiUploadHandler(w http.ResponseWriter, r *http.Request, _ map[string]strin
 				http.Error(w, err.Error(), http.StatusInternalServerError)
 				return
 			}
-			dst, err := os.Create(filepath.Join(filePath, strconv.FormatInt(currentDate.Unix(), 10)+"_"+uuid.NewV4().String()+filepath.Ext(part.FileName())))
+			uuid, _ := uuid.NewV4()
+			dst, err := os.Create(filepath.Join(filePath, strconv.FormatInt(currentDate.Unix(), 10)+"_"+uuid.String()+filepath.Ext(part.FileName())))
 			defer dst.Close()
 			if err != nil {
 				http.Error(w, err.Error(), http.StatusInternalServerError)

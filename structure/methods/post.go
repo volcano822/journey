@@ -1,9 +1,9 @@
 package methods
 
 import (
-	"github.com/kabukky/journey/database"
-	"github.com/kabukky/journey/date"
-	"github.com/kabukky/journey/structure"
+	"github.com/volcano822/journey/database"
+	"github.com/volcano822/journey/date"
+	"github.com/volcano822/journey/structure"
 	"log"
 )
 

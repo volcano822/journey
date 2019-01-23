@@ -3,9 +3,9 @@ package migration
 import (
 	"database/sql"
 	"errors"
-	"github.com/kabukky/journey/date"
-	"github.com/kabukky/journey/filenames"
-	"github.com/kabukky/journey/helpers"
+	"github.com/volcano822/journey/date"
+	"github.com/volcano822/journey/filenames"
+	"github.com/volcano822/journey/helpers"
 	"log"
 	"os"
 	"path/filepath"
