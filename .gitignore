@@ -14,26 +14,6 @@ releases/
 content/data/*
 !content/data/README.md
 
-# Images
-content/images/*
-!content/images/README.md
-
-# Themes
-content/themes/*
-!content/themes/README.md
-!content/themes/promenade/*
-
-# Https certs
-content/https/*
-!content/https/README.md
-
-# Plugins
-content/plugins/*
-!content/plugins/README.md
-
-# Pages
-content/pages/*
-!content/pages/README.md
 
 # Go
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
