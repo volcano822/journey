@@ -8,3 +8,4 @@ content/data/*
 
 .idea
 output
+nohup.out

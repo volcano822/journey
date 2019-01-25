@@ -9,6 +9,7 @@ mkdir output
 cp -r built-in output/
 cp -r contents output/
 cp config.json output/
+cp control.sh output/
 cp $GOPATH/bin/journey output/
 
 cd output
