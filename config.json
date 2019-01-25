@@ -1,8 +1,5 @@
 {
   "HttpHostAndPort": ":80",
-  "HttpsHostAndPort": ":8085",
-  "HttpsUsage": "None",
-  "Url": "http://www.hexuefei.tech:80",
-  "HttpsUrl": "https://127.0.0.1:8085",
+  "Url": "http://www.hexuefei.tech",
   "UseLetsEncrypt": false
 }

@@ -6,8 +6,7 @@ go install github.com/volcano822/journey
 
 rm -rf output
 mkdir output
-cp -r built-in output/
-cp -r contents output/
+cp -r resources output/
 cp config.json output/
 cp control.sh output/
 cp $GOPATH/bin/journey output/

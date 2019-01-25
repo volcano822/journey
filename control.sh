@@ -28,8 +28,8 @@ then
     do_stop
 elif [[ $op == 'restart' ]]
 then
-    do_start
     do_stop
+    do_start
 else
     show_usage
 fi
