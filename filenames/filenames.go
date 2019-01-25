@@ -18,7 +18,7 @@ var (
 
 	// For assets that are created, changed, our user-provided while running journey
 	ConfigFilename   = filepath.Join(AssetPath, "config.json")
-	ContentFilepath  = filepath.Join(AssetPath, "content")
+	ContentFilepath  = filepath.Join(AssetPath, "contents")
 	DatabaseFilepath = filepath.Join(ContentFilepath, "data")
 	DatabaseFilename = filepath.Join(ContentFilepath, "data", "journey.db")
 	ThemesFilepath   = filepath.Join(ContentFilepath, "themes")
