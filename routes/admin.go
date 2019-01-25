@@ -12,6 +12,7 @@ import (
 	"time"
 
 	"github.com/dimfeld/httptreemux"
+	"github.com/satori/go.uuid"
 	"github.com/volcano822/journey/common/authentication"
 	"github.com/volcano822/journey/common/configuration"
 	"github.com/volcano822/journey/common/conversion"
@@ -22,7 +23,6 @@ import (
 	"github.com/volcano822/journey/common/structure"
 	"github.com/volcano822/journey/common/structure/methods"
 	"github.com/volcano822/journey/common/templates"
-	"github.com/satori/go.uuid"
 )
 
 type JsonPost struct {

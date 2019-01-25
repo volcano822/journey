@@ -3,13 +3,13 @@ package database
 import (
 	"database/sql"
 
+	_ "github.com/mattn/go-sqlite3"
+	"github.com/satori/go.uuid"
 	"github.com/volcano822/journey/common/database/migration"
 	"github.com/volcano822/journey/common/date"
 	"github.com/volcano822/journey/common/filenames"
 	"github.com/volcano822/journey/common/helpers"
 	"github.com/volcano822/journey/common/structure"
-	_ "github.com/mattn/go-sqlite3"
-	"github.com/satori/go.uuid"
 )
 
 // Handler for read access

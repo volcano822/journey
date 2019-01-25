@@ -1,12 +1,12 @@
 package methods
 
 import (
-	"github.com/volcano822/journey/common/structure"
 	"encoding/json"
 	"github.com/volcano822/journey/common/configuration"
 	"github.com/volcano822/journey/common/database"
 	"github.com/volcano822/journey/common/date"
 	"github.com/volcano822/journey/common/slug"
+	"github.com/volcano822/journey/common/structure"
 	"log"
 )
 

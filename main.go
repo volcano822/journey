@@ -1,17 +1,17 @@
 package main
 
 import (
-	"log"
-	"net/http"
-	"runtime"
-		"github.com/dimfeld/httptreemux"
+	"github.com/dimfeld/httptreemux"
 	"github.com/volcano822/journey/common/configuration"
 	"github.com/volcano822/journey/common/database"
 	"github.com/volcano822/journey/common/plugins"
-	"github.com/volcano822/journey/routes"
 	"github.com/volcano822/journey/common/structure/methods"
 	"github.com/volcano822/journey/common/templates"
-	)
+	"github.com/volcano822/journey/routes"
+	"log"
+	"net/http"
+	"runtime"
+)
 
 func main() {
 	// Setup
