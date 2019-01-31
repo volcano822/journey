@@ -20,7 +20,13 @@ func pagesHandler(w http.ResponseWriter, r *http.Request, params map[string]stri
 	return
 }
 
+func aboutHandler(w http.ResponseWriter, r *http.Request, params map[string]string) {
+	http.ServeFile(w, r, filenames.PagesFilepath+"/about.html")
+	return
+}
+
 func InitializePages(router *httptreemux.TreeMux) {
+	router.GET("/about", aboutHandler)
 	// For serving standalone projects or pages saved in in content/pages
 	router.GET("/pages/*filepath", pagesHandler)
 }

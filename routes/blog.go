@@ -171,7 +171,7 @@ func publicHandler(w http.ResponseWriter, r *http.Request, params map[string]str
 func InitializeBlog(router *httptreemux.TreeMux) {
 	// For index
 	router.GET("/", indexHandler)
-	router.GET("/:slug/edit", postEditHandler)
+	//router.GET("/:slug/edit", postEditHandler)
 	router.GET("/:slug/", postHandler)
 	router.GET("/page/:number/", indexHandler)
 	// For author

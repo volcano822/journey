@@ -9,3 +9,4 @@ content/data/*
 .idea
 output
 nohup.out
+build.sh
