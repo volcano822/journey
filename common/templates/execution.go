@@ -12,7 +12,7 @@ import (
 	"net/http"
 	"path/filepath"
 	"sync"
-)
+	)
 
 type Templates struct {
 	sync.RWMutex
@@ -50,6 +50,24 @@ func ShowPostTemplate(writer http.ResponseWriter, r *http.Request, slug string) 
 			return err
 		}
 	}
+	_, err = writer.Write(executeHelper(compiledTemplates.m["post"], &requestData, 1)) // context = post
+	if requestData.PluginVMs != nil {
+		// Put the lua state map back into the pool
+		plugins.LuaPool.Put(requestData.PluginVMs)
+	}
+	return err
+}
+
+func ShowPostTemplateByContent(writer http.ResponseWriter, r *http.Request, post *structure.Post) error {
+	// Read lock templates and global blog
+	compiledTemplates.RLock()
+	defer compiledTemplates.RUnlock()
+	methods.Blog.RLock()
+	defer methods.Blog.RUnlock()
+
+	requestData := structure.RequestData{Posts: make([]structure.Post, 1), Blog: methods.Blog, CurrentTemplate: 1, CurrentPath: r.URL.Path} // CurrentTemplate = post
+	requestData.Posts[0] = *post
+	var err error
 	_, err = writer.Write(executeHelper(compiledTemplates.m["post"], &requestData, 1)) // context = post
 	if requestData.PluginVMs != nil {
 		// Put the lua state map back into the pool
