@@ -121,6 +121,9 @@ func postHandler(w http.ResponseWriter, r *http.Request, params map[string]strin
 			return
 		}
 		return
+	} else if slug == "root.txt" || slug == "root.txt/" {
+		http.Redirect(w, r, "/pages/root.txt", http.StatusFound)
+		return
 	}
 
 	// Render post template
